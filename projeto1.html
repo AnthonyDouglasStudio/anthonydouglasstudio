@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Branding — Anthony Douglas Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#0b0b0b;
+  --text:#f3efe9;
+  --muted:rgba(243,239,233,.72);
+  --line:rgba(255,255,255,.10);
+  --gold:#c7a25a;
+  --gold2:#a67c32;
+  --shadow: 0 28px 80px rgba(0,0,0,.55);
+  --radius: 24px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 520px at 20% 0%, rgba(199,162,90,.12), transparent 55%),
+    radial-gradient(900px 520px at 80% 12%, rgba(255,255,255,.06), transparent 60%),
+    var(--bg);
+  color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit; text-decoration:none}
+.wrap{width:min(1160px, 92%); margin:0 auto}
+.topbar{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(to bottom, rgba(10,10,10,.78), rgba(10,10,10,.55));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topRow{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+  padding:16px 0;
+  gap:14px;
+}
+.nav{
+  display:flex; gap:26px; align-items:center;
+  font-size:12px; letter-spacing:.26em; text-transform:uppercase;
+  color:rgba(243,239,233,.78);
+}
+.nav a{padding:10px 0}
+.nav a:hover{color:rgba(243,239,233,.92)}
+.brandCenter{
+  text-align:center;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:6px;
+}
+.brandName{
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size:22px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.brandStudio{
+  font-size:11px;
+  letter-spacing:.44em;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.brandLine{
+  width:92px; height:2px;
+  background: linear-gradient(90deg, transparent, rgba(199,162,90,.95), transparent);
+  margin-top:2px;
+}
+.topCta{
+  justify-self:end;
+  border:1px solid rgba(199,162,90,.45);
+  color:rgba(243,239,233,.92);
+  background:rgba(0,0,0,.25);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  transition:transform .15s ease, border-color .15s ease;
+}
+.topCta:hover{transform:translateY(-1px); border-color:rgba(199,162,90,.75)}
+.hero{
+  position:relative;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  padding:76px 0 54px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.78)),
+    url("./hero.jpg");
+  background-size:cover;
+  background-position:center;
+  filter:saturate(.92) contrast(1.05);
+  transform:scale(1.02);
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:-60px -80px;
+  background:
+    radial-gradient(700px 360px at 12% 38%, rgba(199,162,90,.12), transparent 65%),
+    radial-gradient(700px 360px at 88% 34%, rgba(255,255,255,.06), transparent 70%);
+  pointer-events:none;
+}
+.heroInner{position:relative; text-align:center}
+.hTitle{
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:clamp(36px, 4vw, 64px);
+  line-height:1.12;
+  margin:0 0 14px;
+  text-shadow:0 18px 48px rgba(0,0,0,.6);
+}
+.hTitle em{font-style:italic; color:var(--gold)}
+.hSub{
+  margin:0 auto 22px;
+  width:min(760px, 92%);
+  color:rgba(243,239,233,.78);
+  font-size:clamp(14px, 1.2vw, 18px);
+}
+.actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:13px 20px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  border:1px solid rgba(199,162,90,.45);
+  background:rgba(0,0,0,.25);
+  color:rgba(243,239,233,.92);
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.btn:hover{transform:translateY(-1px); border-color:rgba(199,162,90,.75)}
+.btn.solid{background:rgba(199,162,90,.12)}
+.section{padding:84px 0; position:relative}
+.band{
+  background:
+    radial-gradient(1000px 420px at 20% 30%, rgba(199,162,90,.12), transparent 60%),
+    radial-gradient(1000px 420px at 80% 20%, rgba(255,255,255,.06), transparent 70%),
+    linear-gradient(to bottom, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.cardGlass{
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding:44px 40px;
+  backdrop-filter: blur(10px);
+}
+.centered{text-align:center}
+.adSeal{display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:-10px}
+.adSeal img{
+  width:92px; height:auto; display:block;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,.55));
+}
+.h2Title{
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:clamp(28px, 2.6vw, 44px);
+  margin:0 0 12px;
+}
+.h2Title em{color:var(--gold); font-style:italic}
+.pMuted{color:rgba(243,239,233,.72); max-width:860px; margin:0 auto}
+.kicker{
+  text-align:center;
+  font-size:12px;
+  letter-spacing:.36em;
+  text-transform:uppercase;
+  color:rgba(243,239,233,.70);
+  margin-bottom:10px;
+}
+.portTitle{
+  text-align:center;
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:clamp(30px, 3vw, 48px);
+  margin:0 0 26px;
+}
+.portTitle span{color:var(--gold)}
+.works{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+.workCard{
+  border-radius:22px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  box-shadow: 0 22px 55px rgba(0,0,0,.45);
+  transition: transform .18s ease, border-color .18s ease;
+}
+.workCard:hover{transform: translateY(-2px); border-color: rgba(199,162,90,.55)}
+.workThumb{aspect-ratio: 16 / 10; width:100%; display:block; object-fit:cover}
+.workLabel{padding:14px 16px 16px; display:flex; flex-direction:column; gap:6px}
+.workTop{font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:rgba(243,239,233,.74)}
+.workName{font-family:"Playfair Display", Georgia, serif; font-size:16px; letter-spacing:.08em; text-transform:uppercase}
+.final{text-align:center; padding:90px 0 56px}
+.final small{display:block; color:rgba(199,162,90,.9); letter-spacing:.36em; text-transform:uppercase; margin-bottom:10px}
+.final h3{font-family:"Playfair Display", Georgia, serif; font-size:clamp(30px, 3.4vw, 56px); margin:0 0 18px; line-height:1.15}
+.final h3 em{color:var(--gold); font-style:italic}
+.footer{border-top:1px solid rgba(255,255,255,.06); padding:22px 0 26px; color:rgba(243,239,233,.68); font-size:12px; letter-spacing:.20em; text-transform:uppercase}
+.footerRow{display:flex; gap:14px; flex-wrap:wrap; justify-content:center}
+.sep{opacity:.45}
+.wpp{
+  position:fixed; right:22px; bottom:22px; z-index:99;
+  padding:12px 18px; border-radius:999px;
+  border:1px solid rgba(199,162,90,.45);
+  background:rgba(0,0,0,.28);
+  backdrop-filter: blur(10px);
+  color:rgba(243,239,233,.92);
+  font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+  box-shadow:0 18px 55px rgba(0,0,0,.45);
+  transition:transform .15s ease, border-color .15s ease;
+}
+.wpp:hover{transform:translateY(-1px); border-color:rgba(199,162,90,.75)}
+.projectHero{
+  padding:84px 0 36px;
+  background:
+    radial-gradient(1000px 420px at 20% 40%, rgba(199,162,90,.12), transparent 60%),
+    radial-gradient(1000px 420px at 80% 20%, rgba(255,255,255,.06), transparent 70%);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.breadcrumb{
+  color:rgba(243,239,233,.62);
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.gallery{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:22px}
+.ph{
+  aspect-ratio: 4 / 3;
+  border-radius:18px;
+  border:1px dashed rgba(255,255,255,.16);
+  background:rgba(255,255,255,.03);
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(243,239,233,.55);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:11px;
+}
+@media (max-width: 900px){
+  .topRow{grid-template-columns: 1fr auto; grid-auto-rows:auto}
+  .nav{display:none}
+  .works{grid-template-columns: 1fr}
+  .gallery{grid-template-columns: 1fr}
+}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topRow">
+      <nav class="nav" aria-label="Navegação">
+        <a href="./index.html#sobre">Sobre</a>
+        <a href="./index.html#portfolio">Portfólio</a>
+        <a href="./index.html#contato">Contato</a>
+      </nav>
+
+      <a class="brandCenter" href="./index.html" aria-label="Anthony Douglas Studio">
+        <div class="brandName">Anthony Douglas</div>
+        <div class="brandStudio">Studio</div>
+        <div class="brandLine" aria-hidden="true"></div>
+      </a>
+
+      <a class="topCta" href="./index.html#portfolio">Voltar</a>
+    </div>
+  </header>
+
+  <section class="projectHero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="./index.html#portfolio">Portfólio</a> <span style="opacity:.45">/</span> Branding</div>
+      <h1 class="h2Title" style="margin-top:10px;">Branding</h1>
+      <p class="pMuted" style="margin:0;">Identidade visual premium e materiais de marca.</p>
+
+      <div style="margin-top:26px;">
+        <img src="./projeto1.jpg" alt="Capa do projeto" style="width:100%; border-radius:22px; border:1px solid rgba(255,255,255,.10); box-shadow:0 22px 55px rgba(0,0,0,.45); object-fit:cover; max-height:520px"/>
+      </div>
+
+      <div class="cardGlass" style="margin-top:18px;">
+        <h2 class="h2Title" style="font-size:28px; margin:0 0 10px;">Galeria do projeto</h2>
+        <p class="pMuted" style="margin:0;">
+          Espaços prontos para você adicionar mais imagens depois. Quando você tiver as fotos, é só colocar na pasta e trocar os blocos abaixo por &lt;img&gt;.
+        </p>
+
+        <div class="gallery" aria-label="Galeria (placeholders)">
+          <div class="ph">Imagem 01</div>
+          <div class="ph">Imagem 02</div>
+          <div class="ph">Imagem 03</div>
+          <div class="ph">Imagem 04</div>
+          <div class="ph">Imagem 05</div>
+          <div class="ph">Imagem 06</div>
+        </div>
+
+        <div class="actions" style="margin-top:18px;">
+          <a class="btn solid" href="mailto:anthonydouglasstudio@gmail.com">Orçamento por e-mail</a>
+          <a class="btn" href="https://wa.me/5519981111916?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20Branding%20."
+             target="_blank" rel="noopener">Orçamento no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footerRow">
+      <span>anthonydouglasstudio.github.io/anthonydouglasstudio</span>
+      <span class="sep">|</span>
+      <span>anthonydouglasstudio@gmail.com</span>
+      <span class="sep">|</span>
+      <span>@anthonydouglasstudio</span>
+    </div>
+  </footer>
+</body>
+</html>
